@@ -1,0 +1,163 @@
+/* Paleta de Colores Fríos Oscuros */
+:root {
+    --color-dark-blue: #0A192F; /* Fondo Principal */
+    --color-dark-element: #112240; /* Fondo de Elementos/Cards/Navbar */
+    --color-accent: #64FFDA; /* Color de Acento (Cian Brillante) */
+    --color-text-light: #ccd6f6; /* Texto Primario */
+    --color-text-secondary: #8892b0; /* Texto Secundario/Párrafos */
+    --color-border: #303C55; /* Borde Sutil */
+}
+
+/* Aplicar el fondo oscuro y texto base a toda la página */
+body {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+}
+
+/* Títulos y texto */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-light);
+}
+
+p, .lead, .card-text {
+    color: var(--color-text-secondary);
+}
+
+/* Sobreescribir clases de color de Bootstrap */
+
+/* Navbar y Footer */
+.bg-dark {
+    background-color: var(--color-dark-element) !important;
+}
+
+/* Secciones de fondo claro (Skills, Contacto) */
+.bg-light {
+    background-color: var(--color-dark-element) !important;
+    color: var(--color-text-light); /* Asegura que el texto siga siendo claro */
+}
+
+/* Colores de Acento (Primary) */
+/* Esto afectará a la Hero Section, Botones, Badges, etc. */
+.bg-primary {
+    /* En la Hero, usamos un degradado de los tonos oscuros */
+    background-color: var(--color-dark-blue) !important;
+}
+
+/* Estilo para la sección Hero */
+.hero-section {
+    /* Usaremos un degradado sutil en tonos fríos oscuros */
+    background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-dark-element) 100%); 
+    color: var(--color-text-light);
+}
+
+/* Botones y Enlaces */
+
+/* Botón Primario (Ver Proyectos, Enviar Mensaje) */
+.btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-dark-blue); /* Texto oscuro para el contraste */
+}
+
+.btn-primary:hover {
+    background-color: #79F8C6; /* Tono más claro en hover */
+    border-color: #79F8C6;
+}
+
+/* Botón Outline Light (Contactar en Hero) */
+.btn-outline-light {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark-blue);
+    border-color: var(--color-accent);
+}
+
+/* Botón Outline Primary (Ver Más en Proyectos) */
+.btn-outline-primary {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark-blue);
+    border-color: var(--color-accent);
+}
+
+/* Tarjetas (Cards) */
+.card {
+    background-color: var(--color-dark-element); /* Fondo de la tarjeta */
+    border: 1px solid var(--color-border); /* Borde sutil */
+    color: var(--color-text-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.2); /* Sombra de acento */
+}
+
+/* Íconos y Badges */
+
+/* Íconos de Habilidades (Eliminamos colores de Bootstrap en HTML y lo controlamos aquí) */
+/* Esto sobrescribe text-primary, text-success, text-danger */
+#skills .display-4 {
+    color: var(--color-accent) !important;
+}
+
+/* Badges de Proyecto */
+/* Hacemos que bg-primary, bg-success y bg-danger usen el acento para un look limpio */
+.badge.bg-primary, 
+.badge.bg-success, 
+.badge.bg-danger {
+    background-color: var(--color-accent) !important;
+    color: var(--color-dark-blue) !important;
+    font-weight: 600;
+}
+
+/* Navbar Links */
+.navbar-brand, .nav-link {
+    color: var(--color-text-light) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-item .active > .nav-link {
+    color: var(--color-accent) !important;
+}
+
+/* Formulario */
+.form-control {
+    background-color: var(--color-dark-element);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+}
+
+.form-control:focus {
+    background-color: var(--color-dark-element);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+    color: var(--color-text-light);
+}
+
+.form-label {
+    color: var(--color-text-light);
+}
+
+/* Footer Links */
+footer a {
+    color: var(--color-text-light) !important;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-accent) !important;
+}
+
+/* Estilo original que se mantiene */
+.min-vh-75 {
+    min-height: 75vh;
+}
